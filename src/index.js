@@ -43,8 +43,8 @@ export default class Recorder extends Component {
 
   render() {
     var buttonClasses = classNames({
-      '.button' :  true,
-      '.recording' : this.state.isRecording
+      'button' :  true,
+      'recording' : this.state.isRecording
     });
     const {
       recorderParams,
