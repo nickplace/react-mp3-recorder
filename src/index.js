@@ -39,7 +39,13 @@ export default class Recorder extends Component {
     this._cleanup()
   }
 
+
+
   render() {
+    var buttonClasses = classNames({
+      '.button' :  true,
+      '.recording' : this.state.isRecording
+    });
     const {
       recorderParams,
       onRecordingComplete,
@@ -54,8 +60,7 @@ export default class Recorder extends Component {
         {...rest}
       >
         <div
-          className={'.button' :  true,
-          '.recording' : this.state.isRecording}
+          className={buttonClasses}
           onMouseDown={this._onMouseDown}
           onMouseUp={this._onMouseUp}
         >
