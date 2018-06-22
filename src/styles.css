@@ -31,3 +31,7 @@
   transform: scale(1.03);
   background: #e5432d;
 }
+
+.button.recording {
+  background: #333;
+}
