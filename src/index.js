@@ -52,6 +52,7 @@ export default class Recorder extends Component {
       recorderParams,
       onRecordingComplete,
       onRecordingError,
+      onRecordingBegun,
       className,
       ...rest
     } = this.props
