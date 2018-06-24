@@ -20,13 +20,15 @@ export default class Recorder extends Component {
     recorderParams: PropTypes.object,
     onRecordingComplete: PropTypes.func,
     onRecordingError: PropTypes.func,
+    onRecordingBegun: PropTypes.func,
     className: PropTypes.string
   }
 
   static defaultProps = {
     recorderParams: { },
     onRecordingComplete: () => { },
-    onRecordingError: () => { }
+    onRecordingError: () => { },
+    onRecordingBegun: () => { }
   }
 
   state = {
@@ -80,7 +82,7 @@ export default class Recorder extends Component {
 
   _onMouseUp = () => {
     if (!this.state.isRecording) {
-
+      this.props.onRecordingBegun()
       const {
         recorderParams
       } = this.props
